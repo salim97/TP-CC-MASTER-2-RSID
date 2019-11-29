@@ -11,8 +11,9 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'stable'  
-    # Get flutter packages
+    # go to flutter folder
     - run: cd ANDROID IOS = DART FLUTTER/tp_cc_restful_api
+    # Get flutter packages
     - run: flutter packages pub get
     # Build :D 
     - run: flutter build apk --debug
