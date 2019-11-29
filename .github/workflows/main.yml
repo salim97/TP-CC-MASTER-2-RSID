@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: homework
-          path: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_apibuild/app/outputs/apk/release/app-release.apk
+          path: /app/outputs/apk/release/app-release.apk
         
 #       - name: Create Release
 #         id: create_release
