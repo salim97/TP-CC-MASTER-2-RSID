@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+      with:
+        path: "ANDROID IOS = DART FLUTTER/tp_cc_restful_api/" # Line 22
 
     - name: install dependencies
       uses: steebchen/flutter@v1.0.0
