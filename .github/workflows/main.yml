@@ -1,4 +1,4 @@
-name: CI
+name: FLUTTER GITHUB ACTION TEST 01
 on: push
 jobs:
   test:
