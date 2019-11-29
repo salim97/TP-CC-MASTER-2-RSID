@@ -8,12 +8,17 @@ jobs:
       - uses: actions/checkout@v1
       - name: Hello world
         run: |
-          echo $GITHUB_WORKSPACE
           echo "/home/runner/work/TP-CC-MASTER-2-RSID/TP-CC-MASTER-2-RSID/ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk"
+          echo GITHUB_WORKSPACE= $GITHUB_WORKSPACE
           echo GITHUB_WORKFLOW= $GITHUB_WORKFLOW
           echo GITHUB_ACTION= $GITHUB_ACTION
           echo GITHUB_ACTOR= $GITHUB_ACTOR
           echo GITHUB_REPOSITORY= $GITHUB_REPOSITORY
+          echo PATH_TO_APK= $PATH_TO_APK
+        env:
+          FLUTTER_DEFAULT_APK_PATH: "/build/app/outputs/apk/release/app-release.apk"
+          PATH_TO_FOLDER_SOURCE: "/ANDROID IOS = DART FLUTTER/tp_cc_restful_api"
+          PATH_TO_APK: $GITHUB_WORKSPACE $PATH_TO_FOLDER_SOURCE $FLUTTER_DEFAULT_APK_PATH
           
 #       - uses: actions/setup-java@v1
 #         with:
