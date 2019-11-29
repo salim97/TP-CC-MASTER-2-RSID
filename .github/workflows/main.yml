@@ -13,7 +13,6 @@ jobs:
         with:
           flutter-version: '1.7.8+hotfix.4'
           path: "ANDROID IOS = DART FLUTTER/tp_cc_restful_api/" # Line 22
-      - working-directory: "ANDROID IOS = DART FLUTTER/tp_cc_restful_api/"
       - run: flutter pub get
       - run: flutter build apk
  
