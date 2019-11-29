@@ -6,34 +6,43 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-java@v1
-        with:
-          java-version: '12.x'
-      - uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '1.7.8+hotfix.4'
-      
-      - name: Install dependencies
-        working-directory: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api
-        run: flutter pub get
-      
-      - name: build apk
-        working-directory: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api
-        run: flutter build apk
-        
-      - name: Upload apk to artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: homework
-          path: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk
+      - name: Hello world
+        run: |
+          echo $GITHUB_WORKSPACE
+          echo "/home/runner/work/TP-CC-MASTER-2-RSID/TP-CC-MASTER-2-RSID/ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk"
+          echo GITHUB_WORKFLOW= $GITHUB_WORKFLOW
+          echo GITHUB_ACTION= $GITHUB_ACTION
+          echo GITHUB_ACTOR= $GITHUB_ACTOR
+          echo GITHUB_REPOSITORY= $GITHUB_REPOSITORY
           
-      - name: Upload to release
-        uses: JasonEtco/upload-to-release@master
-        with:
-          args: "/home/runner/work/TP-CC-MASTER-2-RSID/TP-CC-MASTER-2-RSID/ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       - uses: actions/setup-java@v1
+#         with:
+#           java-version: '12.x'
+#       - uses: subosito/flutter-action@v1
+#         with:
+#           flutter-version: '1.7.8+hotfix.4'
+      
+#       - name: Install dependencies
+#         working-directory: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api
+#         run: flutter pub get
+      
+#       - name: build apk
+#         working-directory: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api
+#         run: flutter build apk
         
+#       - name: Upload apk to artifacts
+#         uses: actions/upload-artifact@v1
+#         with:
+#           name: homework
+#           path: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk
+          
+#       - name: Upload to release
+#         uses: JasonEtco/upload-to-release@master
+#         with:
+#           args: "/home/runner/work/TP-CC-MASTER-2-RSID/TP-CC-MASTER-2-RSID/ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk"
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#########################################################
 #       - name: Create Release
 #         id: create_release
 #         uses: actions/create-release@v1
