@@ -12,7 +12,7 @@ jobs:
       with:
         channel: 'stable'  
     # Get flutter packages
-    - run: cd ANDROID IOS = DART FLUTTER/tp_cc_restful_api && flutter packages pub get
+    - run: cd ANDROID IOS = DART FLUTTER/tp_cc_restful_api
     - run: flutter packages pub get
     # Build :D 
     - run: flutter build apk --debug
