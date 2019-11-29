@@ -11,9 +11,10 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.7.8+hotfix.4'
-      - run: cd "ANDROID IOS = DART FLUTTER"
-      - run: cd "tp_cc_restful_api"
-      - run: flutter pub get
+      - run: echo "hello world"
+#       - run: cd "ANDROID IOS = DART FLUTTER"
+#       - run: cd "tp_cc_restful_api"
+#       - run: flutter pub get
 #       - run: flutter build aot
 
 
