@@ -18,7 +18,7 @@ jobs:
         env:
           FLUTTER_DEFAULT_APK_PATH: "/build/app/outputs/apk/release/app-release.apk"
           PATH_TO_FOLDER_SOURCE: "/ANDROID IOS = DART FLUTTER/tp_cc_restful_api"
-          PATH_TO_APK: ${{GITHUB_WORKSPACE}}${{PATH_TO_FOLDER_SOURCE}}${{FLUTTER_DEFAULT_APK_PATH}}
+          PATH_TO_APK: ${{GITHUB_WORKSPACE}} ${{PATH_TO_FOLDER_SOURCE}} ${{FLUTTER_DEFAULT_APK_PATH}}
           
 #       - uses: actions/setup-java@v1
 #         with:
