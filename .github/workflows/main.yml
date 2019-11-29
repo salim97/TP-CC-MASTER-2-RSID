@@ -12,9 +12,16 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.7.8+hotfix.4'
-          path: "ANDROID IOS = DART FLUTTER/tp_cc_restful_api/" # Line 22
-      - run: flutter pub get
-      - run: flutter build apk
+      
+      - name: Install dependencies
+        working-directory: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api
+        run: flutter pub get
+      
+      - name: build apk
+        working-directory: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api
+        run: flutter build apk
+    
+
  
           
         
