@@ -18,14 +18,14 @@ jobs:
         run: flutter pub get
       
       - name: build apk
-#         working-directory: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api
+        working-directory: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_api
         run: flutter build apk
         
       - name: Upload apk
         uses: actions/upload-artifact@v1
         with:
           name: homework
-          path: build/app/outputs/apk/release/app-release.apk
+          path: ./ANDROID IOS = DART FLUTTER/tp_cc_restful_apibuild/app/outputs/apk/release/app-release.apk
         
 #       - name: Create Release
 #         id: create_release
