@@ -1,4 +1,4 @@
-name: 'Hello World'
+name: 'Flutter Android Debug'
 on: [push]
 jobs: 
   build-and-test: 
