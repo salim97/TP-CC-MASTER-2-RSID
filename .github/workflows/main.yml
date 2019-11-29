@@ -14,12 +14,7 @@ jobs:
           echo GITHUB_ACTION= $GITHUB_ACTION
           echo GITHUB_ACTOR= $GITHUB_ACTOR
           echo GITHUB_REPOSITORY= $GITHUB_REPOSITORY
-          echo PATH_TO_APK= $PATH_TO_APK
-        env:
-          FLUTTER_DEFAULT_APK_PATH: "/build/app/outputs/apk/release/app-release.apk"
-          PATH_TO_FOLDER_SOURCE: "/ANDROID IOS = DART FLUTTER/tp_cc_restful_api"
-          PATH_TO_APK: ${{GITHUB_WORKSPACE}} 
-          
+          echo $GITHUB_WORKSPACE "/ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk"
 #       - uses: actions/setup-java@v1
 #         with:
 #           java-version: '12.x'
@@ -44,7 +39,7 @@ jobs:
 #       - name: Upload to release
 #         uses: JasonEtco/upload-to-release@master
 #         with:
-#           args: "/home/runner/work/TP-CC-MASTER-2-RSID/TP-CC-MASTER-2-RSID/ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk"
+#           args: $GITHUB_WORKSPACE"/ANDROID IOS = DART FLUTTER/tp_cc_restful_api/build/app/outputs/apk/release/app-release.apk"
 #         env:
 #           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #########################################################
